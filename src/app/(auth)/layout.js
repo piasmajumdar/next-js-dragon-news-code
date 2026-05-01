@@ -1,8 +1,9 @@
 import Navbar from "@/components/shared/Navbar";
+import { montserrat } from "../layout";
 
 const AuthLayout = ({children}) => {
     return (
-        <div>
+        <div className={`${montserrat.className}`}>
             <Navbar></Navbar>
             {children}
         </div>
