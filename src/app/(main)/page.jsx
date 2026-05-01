@@ -1,4 +1,5 @@
 import LeftSideBar from "@/components/homepage/news/LeftSideBar";
+import RightSideBar from "@/components/homepage/news/RightSideBar";
 import Image from "next/image";
 
 async function getCategories() {
@@ -20,8 +21,8 @@ export default async function Home() {
         All News
       </div>
 
-      <div className="font-bold text-lg bg-yellow-100 col-span-3">
-        Social Icons
+      <div className="col-span-3">
+        <RightSideBar></RightSideBar>
       </div>
     </div>
   );
