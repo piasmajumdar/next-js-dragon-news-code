@@ -1,3 +1,4 @@
+import LeftSideBar from "@/components/homepage/news/LeftSideBar";
 import Image from "next/image";
 
 async function getCategories() {
@@ -13,16 +14,7 @@ export default async function Home() {
 
   return (
     <div className="grid grid-cols-12 gap-2 w-11/12 mx-auto my-15">
-      <div className=" col-span-3">
-        <h2 className="font-bold text-lg">All Categories</h2>
-        <ul className="flex flex-col gap-3 mt-6">
-          {
-            categories.news_category.map(category => {
-              return <li key={category.category_id} className="bg-slate-100 p-2 rounded-md font-bold text-center text-md">{category.category_name}</li>
-            })
-          }
-        </ul>
-      </div>
+      <LeftSideBar categories={categories} activeId={null}></LeftSideBar>
 
       <div className="font-bold text-lg bg-purple-100 col-span-6">
         All News
