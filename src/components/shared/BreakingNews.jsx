@@ -1,13 +1,42 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
+const news = [
+    {
+        "_id": "1",
+        "title": "Breaking News: New Policy Announced by the Government"
+    },
+    {
+        "_id": "2",
+        "title": "Breaking News: Stock Markets Surge Amid Global Optimism"
+    },
+    {
+        "_id": "3",
+        "title": "Major Earthquake Hits Coastal Region"
+    },
+    {
+        "_id": "4",
+        "title": "Breaking News: Tech Giant Releases New AI Product"
+    },
+    {
+        "_id": "5",
+        "title": "International Sports Event Begins Today"
+    }
+]
+
 const BreakingNews = () => {
     return (
         <div className='flex justify-between gap-4 items-center bg-gray-200 p-2 w-11/12 mx-auto'>
             <button className='btn bg-red-500 text-white'>Latest News</button>
 
-            <Marquee>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae commodi, accusamus, eos alias officia totam adipisci provident, excepturi consectetur aut rerum nisi ipsa obcaecati voluptate dolore odit inventore odio maxime saepe soluta quam. Sapiente cumque illo fuga ullam mollitia eius voluptas facere omnis quasi quia eos inventore delectus accusamus dicta pariatur suscipit, vel ipsum quos voluptate voluptatum. Reiciendis, eius delectus porro minus dolorum saepe maiores nesciunt doloribus! Temporibus exercitationem excepturi in, tempora eius nobis nam? Commodi pariatur vitae adipisci dolor, fugit harum excepturi consequuntur ipsum voluptatum eius? Sint officiis ullam similique hic voluptatum, voluptatibus quam. Reiciendis repellat odio in hic minus officiis aliquid consequatur qui voluptate illum autem nostrum illo placeat accusantium repudiandae quia quis reprehenderit adipisci aspernatur corrupti, error odit tenetur incidunt quam. Dolorum ratione alias maiores ad nisi at nam eum, voluptas nesciunt nihil voluptatem natus temporibus recusandae iusto adipisci provident officiis. Ratione ipsam tenetur eum aut? Voluptates et earum debitis repellat fuga dolor quidem officiis labore sunt iste, commodi molestias consequatur doloribus molestiae fugiat mollitia? Quod culpa explicabo dolorum, eius totam impedit tempore soluta provident sequi numquam alias, ea nisi reprehenderit necessitatibus ab error maxime asperiores ut! Illo neque tenetur placeat quidem at. Nulla, amet quas. Maxime natus tenetur veniam adipisci non sed modi labore quis eos voluptatem. Delectus amet cumque at cupiditate facere, distinctio, minima ipsa in fugit culpa sit atque quis ducimus voluptates iure neque quas odio omnis libero id eaque veritatis expedita? Eveniet ipsam earum consequuntur magnam et doloremque vel fugit excepturi. Delectus obcaecati exercitationem voluptatem rerum nulla est dicta quasi, laboriosam iure veniam quisquam a ex neque tempore, quidem hic dolores laborum accusantium voluptatibus deserunt, commodi accusamus quas! Praesentium cupiditate, saepe dolorum nobis eaque, quo alias, reprehenderit eum commodi voluptatibus deserunt optio amet omnis aut ullam velit. Asperiores, minima deleniti, id vel minus dolor quia optio iste fuga sunt esse error quam, earum ipsam temporibus odit perspiciatis veniam aspernatur quaerat libero aliquid necessitatibus nobis! Excepturi rem quisquam earum, libero qui molestiae quos iusto repellendus at? Nam, dolor dignissimos error molestias inventore rem maiores obcaecati fugiat temporibus? Fuga ex dignissimos, vero harum culpa ratione, fugiat impedit provident cum mollitia aperiam consequuntur assumenda praesentium asperiores itaque. Molestias dolorem vero qui. Est iste ullam, corporis consequuntur minus earum in veritatis unde quia non vitae voluptate voluptatum alias hic quas vero. Dolore eaque dignissimos tenetur ducimus sit placeat. Ducimus vel eos vero incidunt libero suscipit quia dicta voluptatibus amet natus blanditiis laudantium excepturi cum, reprehenderit labore? Sit ea omnis rem dignissimos sunt similique iste illum amet, repudiandae aperiam velit, tempore mollitia a ab dicta blanditiis magni, voluptatem quam placeat quasi necessitatibus aliquid consequatur esse quos. Libero dolorum illum autem impedit in. Itaque soluta, animi, suscipit minima eveniet adipisci vel tempora facere repellendus rem in nobis quibusdam quam tempore pariatur aliquid cum dicta aperiam fugiat dolorum tenetur alias ad! Consequatur amet natus modi ea placeat omnis, minus numquam nemo harum et suscipit ipsa? Quibusdam sunt neque iure rerum odio, aliquam, est illo facere commodi, blanditiis nihil eum.
+            <Marquee pauseOnHover={true} speed={100}>
+                <div className='space-x-10'>
+                    {
+                    news.map(n => {
+                        return <span key={n._id}>{n.title}</span>
+                    })
+                }
+                </div>
             </Marquee>
         </div>
     );
