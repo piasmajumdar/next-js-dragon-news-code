@@ -16,15 +16,17 @@ const RightSideBar = () => {
                 <h2 className="font-semibold text-lg mb-4">Find Us On</h2>
                 <div className="border border-gray-600 rounded-lg overflow-hidden">
                     <table className="w-full border-collapse">
-                        <tr className="border border-gray-600">
-                            <td className="p-2 flex gap-2 items-center"><FaFacebook /> Facebook</td>
-                        </tr>
-                        <tr className="border border-gray-600">
-                            <td className="p-2 flex gap-2 items-center"><FaTwitter /> Twitter</td>
-                        </tr>
-                        <tr className="border border-gray-600">
-                            <td className="p-2 flex gap-2 items-center"><FaInstagram /> Instagram</td>
-                        </tr>
+                        <tbody>
+                            <tr className="border border-gray-600">
+                                <td className="p-2 flex gap-2 items-center"><FaFacebook /> Facebook</td>
+                            </tr>
+                            <tr className="border border-gray-600">
+                                <td className="p-2 flex gap-2 items-center"><FaTwitter /> Twitter</td>
+                            </tr>
+                            <tr className="border border-gray-600">
+                                <td className="p-2 flex gap-2 items-center"><FaInstagram /> Instagram</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>

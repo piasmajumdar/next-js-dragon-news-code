@@ -8,10 +8,19 @@ async function getCategories() {
   return data.data;
 }
 
+const getNewsCategoryId = async({category_id}) =>{
+  const res = await fetch(`https://openapi.programming-hero.com/api/news/category/${category_id}`);
+  const data = await res.json();
+  return data;
+}
+
 
 export default async function Home() {
   const categories = await getCategories();
-  console.log(categories.news_category)
+  console.log(categories.news_category);
+
+  const news = await getNewsCategoryId("04");
+  console.log(news)
 
   return (
     <div className="grid grid-cols-12 gap-2 w-11/12 mx-auto my-15">
