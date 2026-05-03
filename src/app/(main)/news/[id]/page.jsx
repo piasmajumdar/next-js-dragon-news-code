@@ -5,11 +5,21 @@ import { CiBookmark, CiShare2 } from "react-icons/ci";
 import { FaEye } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 
+export const generateMetadata = async({params}) =>{
+    const {id} = await params;
+    const news = await getNewsDetailsById(id);
+    
+    return {
+        title:`Dragon News - ${news.title}`,
+        description: news.details
+    }
+}
+
 const NewsDetailsPage = async ({ params }) => {
     const { id } = await params;
     // console.log(id);
     const news = await getNewsDetailsById(id);
-    console.log(news)
+    // console.log(news)
 
     return (
         <div className="w-4xl mx-auto card bg-base-100 shadow-sm">
