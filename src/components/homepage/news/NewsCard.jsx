@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { CiBookmark, CiShare2 } from "react-icons/ci";
 
 const NewsCard = ({ news }) => {
@@ -27,7 +28,6 @@ const NewsCard = ({ news }) => {
                         </div>
                     </div>
                     <h2 className="card-title">{news.title}</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                     <figure>
                         <Image
                             src={news.image_url}
@@ -37,7 +37,16 @@ const NewsCard = ({ news }) => {
                             className="w-full"
                         />
                     </figure>
-                    <p>{news.details}</p>
+                    <p className="line-clamp-3">{news.details}</p>
+                
+                    <div>
+                        <div></div>
+                        <Link href={`/news/${news._id}`}>
+                        <button>See Details</button>
+                        </Link>
+                    </div>
+
+
                 </div>
             </div>
         </div>
