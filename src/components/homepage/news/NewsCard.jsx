@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CiBookmark, CiShare2 } from "react-icons/ci";
+import { CiBookmark, CiShare2, CiStar } from "react-icons/ci";
+import { FaEye } from "react-icons/fa";
+import { IoIosStar } from "react-icons/io";
 
 const NewsCard = ({ news }) => {
     return (
@@ -38,11 +40,14 @@ const NewsCard = ({ news }) => {
                         />
                     </figure>
                     <p className="line-clamp-3">{news.details}</p>
-                
-                    <div>
-                        <div></div>
+                 
+                    <div className="flex justify-between items-center gap-2">
+                        <div className="flex items-center gap-2">
+                            <h2 className="flex items-center gap-2"><IoIosStar className="text-lg text-yellow-500"/> {news.rating.number}</h2>
+                            <h2 className="flex items-center gap-2"><FaEye  className="text-lg"/> {news.total_view}</h2>
+                        </div>
                         <Link href={`/news/${news._id}`}>
-                        <button>See Details</button>
+                        <button className="btn">See Details</button>
                         </Link>
                     </div>
 
