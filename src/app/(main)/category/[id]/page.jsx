@@ -1,4 +1,5 @@
 import LeftSideBar from "@/components/homepage/news/LeftSideBar";
+import NewsCard from "@/components/homepage/news/NewsCard";
 import RightSideBar from "@/components/homepage/news/RightSideBar";
 import { getCategories, getNewsCategoryId } from "@/lib/data";
 
@@ -23,9 +24,7 @@ export default async function CategoryPage({ params }) {
                         news.length == "0"
                             ? <div className="h-[20vh] flex items-center justify-center">No News Available !</div>
                             : news.map(n => {
-                                return <div key={n._id} className="p-6 border rounded-md">
-                                    {n.title}
-                                </div>
+                                return <NewsCard key={n._id} news={n}></NewsCard>
                             })
                     }
                 </div>
