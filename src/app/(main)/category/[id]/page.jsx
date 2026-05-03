@@ -17,7 +17,7 @@ export default async function CategoryPage({ params }) {
         <div className="grid grid-cols-12 gap-2 w-11/12 mx-auto my-15">
             <LeftSideBar categories={categories} activeId={id}></LeftSideBar>
 
-            <div className="font-bold text-lg col-span-6">
+            <div className="col-span-6">
                 <h2 className="font-bold text-lg">News By Category</h2>
                 <div className="space-y-4 mt-6">
                     {
