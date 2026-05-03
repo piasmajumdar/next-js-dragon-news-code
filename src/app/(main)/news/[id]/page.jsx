@@ -12,7 +12,7 @@ const NewsDetailsPage = async ({ params }) => {
     console.log(news)
 
     return (
-        <div className="card bg-base-100 shadow-sm">
+        <div className="w-4xl mx-auto card bg-base-100 shadow-sm">
             <div className="card-body">
                 {/* Author Details */}
                 <div className="flex justify-between items-center bg-slate-200 p-4">
@@ -44,15 +44,15 @@ const NewsDetailsPage = async ({ params }) => {
                         className="w-full"
                     />
                 </figure>
-                <p className="line-clamp-3">{news.details}</p>
+                <p className="">{news.details}</p>
 
                 <div className="flex justify-between items-center gap-2">
                     <div className="flex items-center gap-2">
                         <h2 className="flex items-center gap-2"><IoIosStar className="text-lg text-yellow-500" /> {news.rating?.number}</h2>
                         <h2 className="flex items-center gap-2"><FaEye className="text-lg" /> {news.total_view}</h2>
                     </div>
-                    <Link href={`/news/${news._id}`}>
-                        <button className="btn">See Details</button>
+                    <Link href={`/category/${news.category_id}`}>
+                        <button className="btn">See other news for this category</button>
                     </Link>
                 </div>
 
