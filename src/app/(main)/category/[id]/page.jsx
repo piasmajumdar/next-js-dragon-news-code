@@ -11,7 +11,7 @@ export default async function CategoryPage({ params }) {
     // console.log(categories.news_category);
 
     const news = await getNewsCategoryId(id);
-    // console.log(news);
+    console.log(news);
 
     return (
         <div className="grid grid-cols-12 gap-2 w-11/12 mx-auto my-15">

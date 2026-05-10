@@ -4,7 +4,8 @@ import { CiBookmark, CiShare2, CiStar } from "react-icons/ci";
 import { FaEye } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 
-const NewsCard = ({ news }) => {
+const   NewsCard = ({ news }) => {
+    console.log(news.author.name)
     return (
         <div>
             <div className="card bg-base-100 shadow-sm">
@@ -14,7 +15,7 @@ const NewsCard = ({ news }) => {
                         <div>
                             <Image
                                 src={news.author?.img}
-                                alt={news.author?.name}
+                                alt={news.author?.name || "no name found"}
                                 height={40}
                                 width={40}
                                 className="rounded-full"
