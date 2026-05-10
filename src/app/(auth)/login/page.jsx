@@ -12,7 +12,7 @@ const LoginPage = () => {
     }
     // console.log(watch('email'))  // watch input value by passing the name of it
 
-    // console.log(errors, "errors")
+    console.log(errors, "errors")
 
     return (
         <div className='w-11/12 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100'>
@@ -28,8 +28,7 @@ const LoginPage = () => {
                             placeholder="Type here email"
                             {...register("email", { required: "Email is required" })}
                         />
-                        {errors.email && <p className='text-red-500'>{errors.email.message}</p>}                        {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
-
+                        {errors.password && <p className='text-red-500'>{errors.email.message}</p>}
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Password</legend>
