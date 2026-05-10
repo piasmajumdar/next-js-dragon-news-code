@@ -8,7 +8,9 @@ const RegisterPage = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const handleLoginFunc = (data) => {
-        console.log(data)
+        console.log("data",data);
+        const {email, name, photo, password} = data;
+        console.log(name, photo, email, password);
     }
     // console.log(watch('email'))  // watch input value by passing the name of it
 
@@ -46,7 +48,7 @@ const RegisterPage = () => {
                             placeholder="Type here email"
                             {...register("email", { required: "Email is required" })}
                         />
-                        {errors.password && <p className='text-red-500'>{errors.email.message}</p>}
+                        {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Password</legend>
