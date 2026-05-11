@@ -62,7 +62,6 @@ const RegisterPage = () => {
                     </fieldset>
 
                     <button className='btn w-full bg-slate-800 text-white'>Login</button>
-                    <p>Don't have an account? <Link href={'/register'} className='text-blue-500'> Register</Link></p>
                 </form>
             </div>
         </div>
