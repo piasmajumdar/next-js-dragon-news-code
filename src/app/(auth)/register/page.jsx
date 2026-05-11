@@ -7,7 +7,10 @@ import { useForm } from 'react-hook-form';
 const RegisterPage = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    console.log(errors, "errors")
+    // console.log(watch('email'))  // watch input value by passing the name of it
 
+    
     const handleLoginFunc = async (data) => {
         console.log("data", data);
         const { email, name, photo, password } = data;
@@ -20,12 +23,12 @@ const RegisterPage = () => {
             image: photo,
             callbackURL: "/",
         });
-        
+
         console.log(res, error)
     }
-    // console.log(watch('email'))  // watch input value by passing the name of it
 
-    console.log(errors, "errors")
+
+
 
     return (
         <div className='w-11/12 mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100'>
