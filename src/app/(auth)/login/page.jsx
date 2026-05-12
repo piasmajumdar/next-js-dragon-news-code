@@ -21,6 +21,13 @@ const LoginPage = () => {
             rememberMe: true,
             callbackURL: "/",
         });
+
+        if (error) {
+            alert(error.message)
+        }
+        if (res) {
+            alert("Signin Successful")
+        }
     }
 
 
