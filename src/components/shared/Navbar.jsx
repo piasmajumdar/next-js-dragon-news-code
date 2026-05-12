@@ -27,7 +27,7 @@ const Navbar = () => {
                 : user ? (
                     <div className='flex items-center gap-2'>
                         <h2>Hello, {user.name}</h2>
-                        <Image src={userAvatar} width={40} height={40} alt='User Avatar'></Image>
+                        <Image src={user.image || userAvatar} width={40} height={40} alt='User Avatar'></Image>
                         <button className='btn bg-purple-500 text-white'
                         onClick={async()=>await authClient.signOut()}>
                             Logout
